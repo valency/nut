@@ -1,0 +1,55 @@
+html
+    head
+        include lib.pug
+        link(rel='stylesheet', type='text/css', href='css/login.css')
+        script(type='text/javascript', src='js/login.js')
+    body
+        .page-content
+            include header
+            .wrapper
+                h3.center
+                    i.fa.fa-spin.fa-spinner
+            .container-fluid.main-content.hidden
+                #banner.page-header
+                    .row
+                        .col-lg-12.form-group
+                            input#username.form-control(placeholder='用户名')
+                        .col-lg-12.form-group
+                            input#password.form-control(type='password',placeholder='密码')
+                        .col-lg-12.form-group
+                            a.btn.btn-primary.form-control(href='javascript:login()') 登录
+            include footer
+
+    //body.login
+    //    .user-login-5
+    //        .row.bs-reset
+    //            .col-md-6.bs-reset
+    //                .login-bg
+    //                    img.login-logo(src='img/logo.png')
+    //            .col-md-6.login-container.bs-reset
+    //                .login-content
+    //                    h1 灵狐一站式大数据平台
+    //                    p
+    //                        | 我们始终聚焦企业的需求，以商业逻辑驱动大数据的应用。为了打破大数据的技术壁垒，我们的大数据平台覆盖并打通了实时采集、集中整合、高效处理、深度分析、精准预测乃至业务应用的每一个关键阶段，轻松实现一站式部署与使用，做到效率与效用的完美统一。
+    //                    form.login-form(action='javascript:login()')
+    //                        .row
+    //                            .col-xs-6
+    //                                input#username.form-control.form-control-solid.placeholder-no-fix.form-group(type='text', autocomplete='off', placeholder='Username', name='username', required='')
+    //                            .col-xs-6
+    //                                input#password.form-control.form-control-solid.placeholder-no-fix.form-group(type='password', autocomplete='off', placeholder='Password', name='password', required='')
+    //                        .row
+    //                            .col-sm-4
+    //                                .rem-password
+    //                                    label.rememberme.mt-checkbox.mt-checkbox-outline
+    //                                        input(type='checkbox', name='remember', value='1')
+    //                                        |  记住登录信息
+    //                                        span
+    //                            .col-sm-8.text-right
+    //                                button.btn.green(type='submit') 登录
+    //                .login-footer
+    //                    .row.bs-reset
+    //                        .col-xs-12.bs-reset
+    //                            .login-copyright.text-right
+    //                                p
+    //                                    a(href='http://www.deepera.com/', target='_blank') 2016 - 2017 云数信息科技（深圳）有限公司
+    //                                    |  版权所有

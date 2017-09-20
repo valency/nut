@@ -1,0 +1,31 @@
+html
+    head
+        include lib
+        link(rel='stylesheet', type='text/css', href='css/model.css')
+        script(type='text/javascript', src='lib/ace-1.2.5/src-min-noconflict/ace.js')
+        script(type='text/javascript', src='lib/ace-1.2.5/src-min-noconflict/ext-modelist.js')
+        script(type='text/javascript', src='js/figure.js')
+        script(type='text/javascript', src='js/model.js')
+    body
+        .page-content
+            include header
+            .wrapper
+                h3.center
+                    i.fa.fa-spin.fa-spinner
+            .container-fluid.main-content.hidden
+                .row
+                    .col-lg-12
+                        .form-group.form-inline
+                            button.form-control.btn.btn-primary(onclick='model_add();')
+                                i.fa.fa-plus
+                                | &nbsp;创建模型
+                        hr
+                        table#table-models.table.table-hover.table-condensed
+                            thead
+                                tr
+                                    th 代号
+                                    th 名称
+                                    th 创建时间
+                                    th 代码类型
+                            tbody
+            include footer

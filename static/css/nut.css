@@ -1,0 +1,63 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+body {
+    padding: 0;
+}
+
+.wrapper {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper .center {
+    top: 50%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+}
+
+.navbar-brand > img {
+    height: 1em;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.page-content {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 186px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.footer li {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+pre.exception {
+    text-align: left;
+    color: #B94A48;
+}
+
+.table td {
+    border-bottom: 1px solid #dddddd;
+    border-top: none !important;
+}
+
+table {
+    font-size: 1em;
+}

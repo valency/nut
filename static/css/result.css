@@ -1,0 +1,17 @@
+pre {
+    max-height: 300px;
+}
+
+pre.exception {
+    color: red;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table-wrapper-limited {
+    max-height: 300px;
+    overflow: auto;
+}
+

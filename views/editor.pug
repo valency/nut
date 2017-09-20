@@ -1,0 +1,85 @@
+html
+    head
+        include lib.pug
+        link(rel='stylesheet', type='text/css', href='css/editor.css')
+        script(type='text/javascript', src='lib/ace-1.2.5/src-min-noconflict/ace.js')
+        script(type='text/javascript', src='lib/ace-1.2.5/src-min-noconflict/ext-modelist.js')
+        script(type='text/javascript', src='js/figure.js')
+        script(type='text/javascript', src='js/editor.js')
+    body
+        .page-content
+            include header
+            .wrapper
+                h3.center
+                    i.fa.fa-spin.fa-spinner
+            .container-fluid.main-content.hidden
+                .row
+                    .col-lg-6.col-md-12
+                        .row
+                            .form-group.col-md-12
+                                .input-group
+                                    select#model-query-syntax.form-control
+                                        option(value='plain_text') N/A
+                                    span.input-group-btn
+                                        a.btn.btn-primary(href='javascript:model_modify()')
+                                            i.fa.fa-save
+                                            | &nbsp;保存
+                                    span.input-group-btn
+                                        a.btn.btn-success(href='javascript:model_exec()')
+                                            i.fa.fa-play
+                                            | &nbsp;运行
+                            .form-group.col-md-12
+                                textarea#model-query-input.form-control(rows='10')
+                            .form-group.col-md-6
+                                .input-group
+                                    span.input-group-addon 模型名称
+                                    input#model-title-input.form-control
+                            .form-group.col-md-6
+                                .input-group
+                                    span.input-group-addon 模型代号
+                                    input#model-id-input.form-control(placeholder='仅限英文、数字及下划线', disabled)
+                            .form-group.col-md-6
+                                .input-group
+                                    span.input-group-addon 运行环境
+                                    select#model-type-input.form-control
+                            .form-group.col-md-6
+                                .input-group
+                                    span.input-group-addon 访问权限
+                                    select#model-public-input.form-control
+                                        option(value='False') 私密
+                                        option(value='True') 公开
+                            .form-group.col-md-12
+                                .input-group
+                                    span.input-group-addon 参数列表
+                                    input#model-argument-input.form-control(placeholder='逗号分隔')
+                            .form-group.col-md-4.hidden
+                                .input-group
+                                    span.input-group-addon 图表标题
+                                    input#model-figure-title-input.form-control
+                            .form-group.col-md-4.hidden
+                                .input-group
+                                    span.input-group-addon 图表类型
+                                    select#model-figure-type-input.form-control
+                            .form-group.col-md-4.hidden
+                                .input-group
+                                    span.input-group-addon 图表表头
+                                    input#model-figure-label-input.form-control(placeholder='逗号分隔')
+                            .col-md-12
+                                hr.col-splitter
+                                p#model-last-update.pull-right.small.text-default 最后保存：N/A
+                    .col-lg-6.col-md-12
+                        .row
+                        .form-group.col-md-12#model-type-1-2.hidden
+                            .input-group
+                                span.input-group-addon 数据源
+                                select#model-exe-src.form-control
+                        .form-group.col-md-12#model-type-3.hidden
+                            .input-group
+                                span.input-group-addon 运行环境
+                                select#model-exe-rte.form-control
+                        .form-group.col-md-12
+                            .row#model-exe-argument
+                        .form-group.col-md-12.hidden
+                            hr.col-splitter
+                            #model-exe-result
+            include footer

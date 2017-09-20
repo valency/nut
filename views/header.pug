@@ -1,0 +1,31 @@
+.navbar.navbar-default
+    .container-fluid
+        .navbar-header
+            a.navbar-brand(href='.')
+                img(src='img/logo.png')
+                | 分布式异构大数据分析服务系统
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+        #navbar-main.navbar-collapse.collapse
+            ul.nav.navbar-nav
+                li#navbar-yarn
+                    a(href='yarn') 异构资源管理
+                li#navbar-alluxio
+                    a(href='alluxio') 分布式内存管理
+                li#navbar-spark
+                    a(href='model?f=spark') 大数据分析引擎
+                li#navbar-gpu
+                    a(href='model?f=gpu') 异构编译框架
+            ul.nav.navbar-nav.navbar-right
+                li.dropdown
+                    a.dropdown-toggle(data-toggle='dropdown', href='#')
+                        span.username ...
+                        | &nbsp;
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='javascript:change_password()') 修改密码
+                        li
+                            a(href='javascript:logout()') 退出登录

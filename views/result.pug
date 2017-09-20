@@ -1,0 +1,52 @@
+html
+    head
+        include lib.pug
+        link(rel='stylesheet', type='text/css', href='css/result.css')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/amcharts.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/serial.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/pie.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/radar.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/themes/light.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/themes/patterns.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amcharts/themes/chalk.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/ammap/ammap.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/ammap/maps/js/worldLow.js')
+        script(type='text/javascript', src='assets/global/plugins/amcharts/amstockcharts/amstock.js')
+        script(type='text/javascript', src='lib/ace-1.2.5/src-min-noconflict/ace.js')
+        script(type='text/javascript', src='js/deepfig.js')
+        script(type='text/javascript', src='js/figure.js')
+        script(type='text/javascript', src='js/result.js')
+    body.page-header-fixed.page-sidebar-closed-hide-logo.page-content-white
+        #fade-wrapper
+            .page-loading.blink NOW LOADING
+        include header.pug
+        .clearfix
+        .page-container
+            // BEGIN CONTENT
+            .page-content-wrapper
+                // BEGIN CONTENT BODY
+                .page-content
+                    // BEGIN PAGE BAR
+                    .page-bar
+                        ul.page-breadcrumb
+                            li
+                                span 模型
+                                i.fa.fa-circle
+                            li
+                                span 分析结果
+                    h3.page-title
+                    // END PAGE BAR
+                    .row.main-content.hidden
+                        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                            .form-group.form-inline
+                                select#model-list.form-control
+                                | &nbsp;
+                                button.form-control.btn.btn-primary(onclick='load_table();')
+                                    i.fa.fa-inbox
+                                    | &nbsp;读取分析结果
+                            hr
+                            #table-result-div
+                // END CONTENT BODY
+            // END CONTENT
+        // END CONTAINER
+        include footer.pug

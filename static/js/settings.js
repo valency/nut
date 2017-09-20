@@ -2,6 +2,8 @@ var API_SERVER = "/api/deepfox/";
 var IMG_SERVER = "/api/img/";
 var ADMIN_SERVER = '/deepfox/';
 var ALLUXIO_SERVER = '/api/nut/alluxio/';
+var SPARK_SERVER = '/api/nut/spark/';
+var YARN_SERVER = '/api/nut/yarn/';
 
 var DT_LANG = {
     "sProcessing": "处理中...",

@@ -31,13 +31,13 @@ body {
 .page-content {
     min-height: 100%;
     position: relative;
-    padding-bottom: 186px;
+    padding-bottom: 64px;
 }
 
 .footer {
     position: absolute;
     bottom: 0;
-    padding-top: 3em;
+    padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
 }

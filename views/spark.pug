@@ -1,0 +1,23 @@
+html
+    head
+        include lib
+        link(rel='stylesheet', type='text/css', href='css/spark.css')
+        script(type='text/javascript', src='js/spark.js')
+    body
+        .page-content
+            include header
+            .wrapper
+                h3.center
+                    i.fa.fa-spin.fa-spinner
+            .container-fluid.main-content.hidden
+                .row
+                    .col-lg-12
+                        ul.nav.nav-tabs
+                            li.active
+                                a(href='#spark-panels', data-toggle='tab', aria-expanded='true') Spark
+                            li
+                                a(href='#yarn-panels', data-toggle='tab', aria-expanded='true') YARN
+                        .tab-content
+                            #spark-panels.tab-pane.fade.active.in
+                            #yarn-panels.tab-pane.fade
+            include footer

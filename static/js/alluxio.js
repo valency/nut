@@ -1,5 +1,6 @@
 $(document).ready(function () {
     check_login();
+    $("#navbar-alluxio").addClass("active");
     $.get(ALLUXIO_SERVER + 'home', function (resp) {
         $(resp).find('.accordion-group').each(function () {
             var p = $(this);

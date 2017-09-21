@@ -117,7 +117,7 @@ function show_model(id) {
                                         html += "<select id='model-exe-src' class='form-control'>";
                                         for (var i = 0; i < data.length; i++) {
                                             var src = data[i];
-                                            html += "<option value='" + src["id"] + "'>" + src["name"] + "</option>";
+                                            if (src['id'].indexOf(model_filter) === 0) html += "<option value='" + src["id"] + "'>" + src["name"] + "</option>";
                                         }
                                         html += "</select>";
                                         html += "</div>";

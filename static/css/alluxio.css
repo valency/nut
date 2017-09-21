@@ -2,6 +2,10 @@
     margin-bottom: 0;
 }
 
-.table th {
+.panel-body .table th {
     border: none !important;
+}
+
+#browser-panels .table tbody th {
+    font-weight: normal;
 }

@@ -11,5 +11,13 @@ html
                     i.fa.fa-spin.fa-spinner
             .container-fluid.main-content.hidden
                 .row
-                    #alluxio-panels.col-lg-12
+                    .col-lg-12
+                        ul.nav.nav-tabs
+                            li#alluxio-li
+                                a(href='#alluxio-panels', data-toggle='tab', aria-expanded='true') 集群状态
+                            li#browser-li
+                                a(href='#browser-panels', data-toggle='tab', aria-expanded='true') 内存文件系统
+                        .tab-content
+                            #alluxio-panels.tab-pane.fade
+                            #browser-panels.tab-pane.fade
             include footer

@@ -5,7 +5,7 @@ function show_result(id, src_type, figure_type, figure_label, callback) {
     }, {
         success: function (resp) {
             resp["conf"] = replace_empty(resp["conf"], null);
-            var html = is_empty(resp["conf"]) ? message("没有提供参数。", 'info') : "<pre>" + resp["conf"] + "</pre>";
+            var html = is_empty(resp["conf"]) ? message("没有提供参数。", 'info') : "<pre class='table-wrapper-limited'>" + resp["conf"] + "</pre>";
             html += "<hr/><div id='figure-" + id + "'>" + message() + "</div>";
             bootbox.hideAll();
             bootbox.alert({
@@ -49,7 +49,7 @@ function render_figure(data, figure_type, figure_label) {
     if (is_empty(data["result"])) {
         container.html(message("运行结果为空。", 'info'));
     } else if (figure_type === 0) {
-        container.html("<pre>" + data["result"] + "</pre>");
+        container.html("<pre class='table-wrapper-limited'>" + data["result"] + "</pre>");
     } else {
         try {
             var result = eval(data["result"]);
@@ -81,11 +81,11 @@ function render_figure(data, figure_type, figure_label) {
         } catch (err) {
             container.height("auto");
             container.html("<p style='margin-top:0;'>" + message("数据格式错误，无法显示！", 'danger') + "</p>");
-            container.append("<pre>" + data["result"].escape() + "</pre>");
-            container.append("<pre class='exception'>" + err + "</pre>");
+            container.append("<pre class='table-wrapper-limited'>" + data["result"].escape() + "</pre>");
+            container.append("<pre class='exception table-wrapper-limited'>" + err + "</pre>");
         }
     }
     if (!is_empty(data["exception"])) {
-        container.append("<hr/><pre class='exception'>" + data["exception"] + "</pre>");
+        container.append("<hr/><pre class='exception table-wrapper-limited'>" + data["exception"] + "</pre>");
     }
 }

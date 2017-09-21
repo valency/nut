@@ -33,7 +33,7 @@ $(document).ready(function () {
         success: function (resp) {
             for (var i = 0; i < resp.length; i++) {
                 var src = resp[i];
-                $('#model-exe-rte').append("<option value='" + src["id"] + "'>" + src["name"] + "</option>");
+                if (src['id'].indexOf(model_filter) === 0) $('#model-exe-rte').append("<option value='" + src["id"] + "'>" + src["name"] + "</option>");
             }
         }, error: function (resp) {
             init_error(resp);

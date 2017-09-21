@@ -38,7 +38,7 @@ $(document).ready(function () {
     });
     $.get(ALLUXIO_SERVER + 'browse?path=' + path + '&offset=0', function (resp) {
         try {
-            var count = /nTotalFile = (\d)/g.exec(resp)[1];
+            var count = /nTotalFile = (\d+)/g.exec(resp)[1];
         } catch (exp) {
             count = 1;
         }

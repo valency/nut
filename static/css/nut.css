@@ -67,3 +67,7 @@ pre.exception {
 table {
     font-size: 1em;
 }
+
+.panel-body {
+    overflow-y: auto;
+}

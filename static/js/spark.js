@@ -8,7 +8,10 @@ $(document).ready(function () {
             html += '<div class="panel-heading">';
             html += '<h3 class="panel-title">';
             var q = p.find('h4');
-            if (!q.length) q = p.find('h3');
+            if (!q.length) {
+                q = p.find('h3');
+                q.find('img').remove();
+            }
             if (!q.length) {
                 $('#spark-panels .panel-body').html(p.html());
                 return null;

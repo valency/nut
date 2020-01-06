@@ -7,7 +7,7 @@ function login() {
     var username = $("#username").val();
     var password = CryptoJS.MD5($("#password").val()).toString();
     dialog_ajax("GET", API_SERVER + "auth/login/", {
-        username: username,
+        certification: username,
         password: password
     }, {
         error: "登录失败！"

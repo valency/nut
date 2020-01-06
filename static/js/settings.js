@@ -1,6 +1,6 @@
 var API_SERVER = "/api/deepfox/";
 var IMG_SERVER = "/api/img/";
-var ADMIN_SERVER = '/deepfox/';
+var ADMIN_SERVER = 'http://avatarsys.org/deepfox/';
 var ALLUXIO_SERVER = '/api/nut/alluxio/';
 var SPARK_SERVER = '/api/nut/spark/';
 var YARN_SERVER = '/api/nut/yarn/';
@@ -42,10 +42,6 @@ var DT_CONF_AJAX = {
 };
 
 var SRC_ENGINES = {
-    // 0: "Not Specified",
-    // 1: "Hive",
-    // 2: "SQLite",
-    // 3: "MySQL",
     4: "PostgreSQL"
 };
 
@@ -53,21 +49,5 @@ var EMPTY_LABEL = "<span class='badge badge-default'>N/A</span>";
 var MODEL_TYPE = ["N/A", "SQL", "Python", "自定义"];
 var MODEL_FIGURE = ["无", "表格", "饼状图", "柱状图", "曲线图"];
 var MODEL_RENDER_TYPE = ["plain_text", "sql", "python", "plain_text"];
-var PROJECT_COLOR = ["red", "green", "blue", "yellow", "purple"];
-var CONTENT_ARGS_TYPE = ["无", "下拉选择框", "输入框", "选择开关", "确认按钮"];
-var REPORT_CONTENT_TYPE = ["纯文字", "HTML 代码", "图表", "参数表"];
-// var CONTENT_ARGS_TYPE_ICON = ["cog", "list", "pencil-square-o", "check-square-o", "youtube-play"];
-// var USER_GROUP = ["普通用户", "管理员", "开发人员"];
-
-// # Configuration notes:
-//     # 0: Should be null
-//     # 1: html: string
-//     #    css: string
-//     #    script: string
-//     # 2: Should follow the configuration of src field (could be string rather than json)
-// # 3: label: string
-//     #    type: int chosen from: 0 (N/A), 1 (select), 2 (input), 3 (checkbox), 4 (confirm button)
-// #    key: string
-//     #    value: json formatted as: type 0: null; type 1: [{key, value},...]; type 2: string (placeholder); type 3: null; type 4: null
 
 if (typeof moment !== 'undefined') moment.locale("zh-cn");

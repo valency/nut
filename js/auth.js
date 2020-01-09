@@ -3,7 +3,7 @@ var USER = null;
 function check_login(callback) {
     var current_page = url_page();
     if (is_empty(Cookies.get('deepfox_token'))) {
-        location.href = "login?callback=" + current_page;
+        location.href = "login.html?callback=" + current_page;
     } else {
         api("GET", API_SERVER + "auth/detail/", null, {
             success: function (data) {
@@ -15,7 +15,7 @@ function check_login(callback) {
                 }
                 if (callback) callback(data);
             }, error: function () {
-                location.href = "login?callback=" + current_page;
+                location.href = "login.html?callback=" + current_page;
             }
         });
     }

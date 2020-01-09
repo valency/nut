@@ -1,0 +1,16 @@
+html
+    head
+        include lib
+        link(rel='stylesheet', type='text/css', href='css/alluxio.css')
+        script(type='text/javascript', src='js/alluxio.js')
+    body
+        .page-content
+            include header
+            .wrapper
+                h3.center
+                    i.fa.fa-spin.fa-spinner
+            .container-fluid.main-content.hidden
+                .row
+                    .col-lg-12
+                        iframe#alluxio-container
+            include footer

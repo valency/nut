@@ -12,6 +12,10 @@ p {
     word-wrap: break-word;
 }
 
+iframe {
+    border: none;
+}
+
 .wrapper {
     position: fixed;
     height: 100vh;

@@ -1,5 +1,5 @@
 $(document).ready(function () {
     check_login(function () {
-        location.href = "dashboard";
+        location.href = "dashboard.html";
     });
 });

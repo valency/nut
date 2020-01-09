@@ -161,7 +161,7 @@ function show_model(id) {
                         label: "<i class='fa fa-sun-o'></i> 调试",
                         className: "btn-warning",
                         callback: function () {
-                            location.href = 'editor?f=' + model_filter + '&id=' + id;
+                            location.href = 'editor.html?f=' + model_filter + '&id=' + id;
                         }
                     }, delete: {
                         label: "<i class='fa fa-trash'></i> 删除",
@@ -297,7 +297,7 @@ function model_input(mode, conf, callback) {
     html += "</div>";
     html += "</div>";
     bootbox.dialog({
-        title: mode_title[mode] + "模型" + (mode === 1 ? ' <a href="editor?f=' + model_filter + '&id=' + conf['id'] + '"><i class="fa fa-share"></i></a>' : ''),
+        title: mode_title[mode] + "模型" + (mode === 1 ? ' <a href="editor.html?f=' + model_filter + '&id=' + conf['id'] + '"><i class="fa fa-share"></i></a>' : ''),
         size: 'large',
         message: html,
         buttons: {

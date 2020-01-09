@@ -1,7 +1,7 @@
 var API_SERVER = "/api/deepfox/";
 var IMG_SERVER = "/api/img/";
 var ADMIN_SERVER = 'http://avatarsys.org/deepfox/';
-var ALLUXIO_SERVER = '/api/nut/alluxio/';
+var ALLUXIO_SERVER = 'http://patriot:32775/';
 var SPARK_SERVER = '/api/nut/spark/';
 var YARN_SERVER = '/api/nut/yarn/';
 
